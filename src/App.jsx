@@ -69,13 +69,12 @@ function App() {
   return (
     <div className="min-h-screen w-full bg-white">
       {/* Navbar */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-        }`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className={`text-2xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+              <h1 className={`text-xl md:text-2xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
                 Riverscape Designs
               </h1>
             </div>
@@ -100,7 +99,7 @@ function App() {
               <a href="#contact" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
                 Contact
               </a>
-              <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full transition-colors">
+              <button className="bg-green-600 hover:bg-green-700 text-white px-4 md:px-6 py-2 rounded-full transition-colors">
                 Get Quote
               </button>
             </div>
@@ -118,48 +117,41 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[80vh] md:h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div className="absolute inset-0 bg-[url('/images/riverscape1.webp')] bg-cover bg-center animate-zoom"></div>
         <div className="relative z-20 text-center text-white px-4 w-full">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Transform Your Outdoor Space</h1>
-          <p className="text-xl md:text-2xl mb-8 animate-fade-in-delay">Professional landscaping services that bring your vision to life</p>
-          <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors animate-fade-in-delay-2">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 animate-fade-in">Transform Your Outdoor Space</h1>
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 px-4 animate-fade-in-delay">Professional landscaping services that bring your vision to life</p>
+          <button className="bg-green-600 hover:bg-green-700 text-white px-6 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg font-semibold transition-colors animate-fade-in-delay-2">
             Get Free Consultation
           </button>
         </div>
       </section>
 
       {/* About Us Section */}
-      <section
-        ref={aboutRef}
-        id="about"
-        className={`w-full py-20 px-4 transition-all duration-1000 ${isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-      >
+      <section ref={aboutRef} id="about" className={`w-full py-12 md:py-20 px-4 transition-all duration-1000 ${isAboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left Column - Image */}
-            <div className={`relative h-[500px] rounded-2xl overflow-hidden transition-all duration-1000 delay-300 ${isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
-              }`}>
+            <div className={`relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden transition-all duration-1000 delay-300 ${isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <div className="absolute inset-0 bg-[url('/images/riverscape2.webp')] bg-cover bg-center"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
             </div>
 
             {/* Right Column - Content */}
-            <div className={`space-y-8 transition-all duration-1000 delay-500 ${isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-              }`}>
+            <div className={`space-y-6 md:space-y-8 transition-all duration-1000 delay-500 ${isAboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <div>
-                <h2 className="text-4xl font-bold mb-4">About Riverscape Designs</h2>
-                <div className="w-20 h-1 bg-green-600 mb-6"></div>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">About Riverscape Designs</h2>
+                <div className="w-20 h-1 bg-green-600 mb-4 md:mb-6"></div>
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                   Founded in 2010, Riverscape Designs has been at the forefront of landscape architecture and design.
                   We combine artistic vision with technical expertise to create outdoor spaces that inspire and endure.
                 </p>
               </div>
 
               {/* Key Features */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                     <span className="text-2xl">🌱</span>
@@ -202,7 +194,7 @@ function App() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-200">
+              <div className="grid grid-cols-3 gap-4 md:gap-6 pt-6 border-t border-gray-200">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
                   <div className="text-gray-600">Projects Completed</div>
@@ -222,16 +214,10 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section
-        ref={servicesRef}
-        id="services"
-        className={`w-full py-20 px-4 bg-gray-50 transition-all duration-1000 ${isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-      >
+      <section ref={servicesRef} id="services" className={`w-full py-12 md:py-20 px-4 bg-gray-50 transition-all duration-1000 ${isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-7xl mx-auto w-full">
-          <h2 className={`text-4xl font-bold text-center mb-12 transition-all duration-1000 delay-300 ${isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className={`text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 transition-all duration-1000 delay-300 ${isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Our Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 title: "Landscape Design",
@@ -264,27 +250,22 @@ function App() {
       </section>
 
       {/* Portfolio Section */}
-      <section
-        ref={portfolioRef}
-        id="portfolio"
-        className={`w-full py-20 px-4 transition-all duration-1000 ${isPortfolioVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-      >
+      <section ref={portfolioRef} id="portfolio" className={`w-full py-12 md:py-20 px-4 transition-all duration-1000 ${isPortfolioVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-7xl mx-auto w-full">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Our Work</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Work</h2>
+            <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto px-4">
               Explore our diverse portfolio of landscape transformations, from residential gardens to commercial spaces.
             </p>
           </div>
 
           {/* Category Filter */}
-          <div className="flex justify-center space-x-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12 px-4">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors
+                className={`px-4 md:px-6 py-2 rounded-full text-sm font-medium transition-colors
                   ${activeCategory === category
                     ? 'bg-green-600 text-white'
                     : 'hover:bg-green-600 hover:text-white'}
@@ -296,7 +277,7 @@ function App() {
           </div>
 
           {/* Portfolio Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {filteredProjects.map((project, index) => (
               <div key={index} className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
                 {/* Image Container */}
@@ -313,9 +294,9 @@ function App() {
                 </div>
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-end transform translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end transform translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
                   <span className="text-sm font-medium text-green-400 mb-2">{project.category}</span>
-                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-2">{project.title}</h3>
                   <p className="text-gray-200 text-sm mb-4">{project.description}</p>
                   <button className="bg-white text-gray-900 px-4 py-2 rounded-full text-sm font-medium w-fit hover:bg-green-600 hover:text-white transition-colors mx-2 mb-2">
                     View Project
@@ -326,8 +307,8 @@ function App() {
           </div>
 
           {/* View More Button */}
-          <div className="text-center mt-12">
-            <button className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors">
+          <div className="text-center mt-8 md:mt-12">
+            <button className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-6 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg font-semibold transition-colors">
               <span>View All Projects</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -338,15 +319,10 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section
-        ref={testimonialsRef}
-        id="testimonials"
-        className={`w-full py-20 px-4 bg-gray-50 transition-all duration-1000 ${isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-      >
+      <section ref={testimonialsRef} id="testimonials" className={`w-full py-12 md:py-20 px-4 bg-gray-50 transition-all duration-1000 ${isTestimonialsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-7xl mx-auto w-full">
-          <h2 className="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">What Our Clients Say</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 name: "Sarah Johnson",
@@ -375,16 +351,11 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section
-        ref={contactRef}
-        id="contact"
-        className={`w-full py-20 px-4 transition-all duration-1000 ${isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-      >
+      <section ref={contactRef} id="contact" className={`w-full py-12 md:py-20 px-4 transition-all duration-1000 ${isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-3xl mx-auto w-full">
-          <h2 className="text-4xl font-bold text-center mb-12">Get in Touch</h2>
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Get in Touch</h2>
+          <form className="space-y-4 md:space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <input
                 type="text"
                 placeholder="Your Name"
@@ -412,8 +383,8 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full bg-gray-900 text-white py-12 px-4">
-        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-4 gap-8">
+      <footer className="w-full bg-gray-900 text-white py-8 md:py-12 px-4">
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Riverscape Designs</h3>
             <p className="text-gray-400">Transforming outdoor spaces into beautiful landscapes since 2010.</p>
