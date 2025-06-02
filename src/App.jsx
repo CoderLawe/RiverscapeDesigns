@@ -68,54 +68,65 @@ function App() {
 
   return (
     <div className="min-h-screen w-full bg-white">
-      {/* Navbar */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 md:h-20">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <h1 className={`text-xl md:text-2xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-                Riverscape Designs
-              </h1>
-            </div>
+      <div className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm flex items-center justify-center">
+        <div className="text-center text-white p-8 max-w-2xl">
+          {/* <h2 className="text-3xl font-bold mb-4">Demo Complete</h2> */}
+          <p className="text-xl mb-6">
+            This was a client demo built by <a href="https://sosahbuilt.com" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">Lawe Sosah</a> for demonstration purposes.
+          </p>
+          <p className="text-lg text-gray-300">
+            Visit <a href="https://sosahbuilt.com" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 underline">sosahbuilt.com</a> to get in touch about your project.
+          </p>
+        </div>
+      </div>
+      <div className="opacity-50 pointer-events-none">
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16 md:h-20">
+              {/* Logo */}
+              <div className="flex-shrink-0">
+                <h1 className={`text-xl md:text-2xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+                  Riverscape Designs
+                </h1>
+              </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
-                Home
-              </a>
-              <a href="#about" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
-                About
-              </a>
-              <a href="#services" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
-                Services
-              </a>
-              <a href="#portfolio" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
-                Portfolio
-              </a>
-              <a href="#testimonials" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
-                Testimonials
-              </a>
-              <a href="#contact" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
-                Contact
-              </a>
-              <button className="bg-green-600 hover:bg-green-700 text-white px-4 md:px-6 py-2 rounded-full transition-colors">
-                Get Quote
-              </button>
-            </div>
+              {/* Desktop Navigation */}
+              <div className="hidden md:flex items-center space-x-8">
+                <a href="#" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
+                  Home
+                </a>
+                <a href="#about" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
+                  About
+                </a>
+                <a href="#services" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
+                  Services
+                </a>
+                <a href="#portfolio" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
+                  Portfolio
+                </a>
+                <a href="#testimonials" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
+                  Testimonials
+                </a>
+                <a href="#contact" className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 transition-colors`}>
+                  Contact
+                </a>
+                <button className="bg-green-600 hover:bg-green-700 text-white px-4 md:px-6 py-2 rounded-full transition-colors">
+                  Get Quote
+                </button>
+              </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 focus:outline-none`}>
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
+              {/* Mobile menu button */}
+              <div className="md:hidden">
+                <button className={`${isScrolled ? 'text-gray-900' : 'text-white'} hover:text-green-600 focus:outline-none`}>
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-
+        </nav>
+      </div>
       {/* Hero Section */}
       <section className="relative w-full h-[80vh] md:h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
@@ -287,10 +298,6 @@ function App() {
                     alt={project.title}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  {/* Updated overlay with stronger gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  {/* Added permanent subtle overlay for better text visibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                 </div>
 
                 {/* Content Overlay */}
